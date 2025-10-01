@@ -1,4 +1,5 @@
 import pg from 'pg';
+import 'dotenv/config';
 
 const config = {
     user: process.env.PGUSER,

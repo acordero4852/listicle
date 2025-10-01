@@ -1,6 +1,6 @@
 import crypto from 'crypto';
 
-const metadata = [
+const recipeData = [
     {
         imgUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
         title: "Spaghetti Carbonara",
@@ -280,8 +280,8 @@ const metadata = [
     }
 ];
 
-metadata.forEach(recipe => {
+recipeData.forEach(recipe => {
     recipe.id = crypto.randomUUID();
-})
+});
 
-export default metadata;
+export default recipeData;

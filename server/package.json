@@ -5,13 +5,14 @@
     "type": "module",
     "scripts": {
         "start": "nodemon --require dotenv/config server.js",
-        "reset": "cd config && node --require dotenv/config reset.js"
+        "reset": "node --require dotenv/config ./config/reset.js"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "description": "",
     "dependencies": {
+        "cors": "^2.8.5",
         "dotenv": "^17.2.2",
         "express": "^5.1.0",
         "nodemon": "^3.1.10",
