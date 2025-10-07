@@ -9,15 +9,19 @@ const createRecipesTable = async () => {
             id TEXT PRIMARY KEY,
             imgUrl TEXT NOT NULL,
             title TEXT NOT NULL,
-            overview TEXT,
+            author TEXT NOT NULL,
+            createdAt TIMESTAMPTZ DEFAULT NOW(),
+            description TEXT,
+            mealType TEXT NOT NULL,
+            course TEXT NOT NULL,
+            diet TEXT[],
+            cuisine TEXT NOT NULL,
+            servings INTEGER NOT NULL,
+            caloriesPerServing INTEGER NOT NULL,
+            prepTimeInMin INTEGER NOT NULL,
+            cookTimeInMin INTEGER NOT NULL,
             ingredients TEXT[] NOT NULL,
-            steps TEXT[] NOT NULL,
-            totalTime TEXT,
-            servings INTEGER,
-            calories INTEGER,
-            cuisine TEXT,
-            course TEXT,
-            dietaryRestrictions TEXT[]
+            steps TEXT[] NOT NULL
         );
     `;
     try {
@@ -32,22 +36,30 @@ const seedRecipesTable = async () => {
     await createRecipesTable();
     recipeData.forEach((recipe) => {
         const insertQuery = {
-            text: `INSERT INTO recipes (id, imgUrl, title, overview, ingredients, steps, totalTime, servings, calories, cuisine, course, dietaryRestrictions) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)`,
+            text: `INSERT INTO recipes (
+                id, imgUrl, title, author, createdAt, description, mealType, course, diet, cuisine, servings, caloriesPerServing, prepTimeInMin, cookTimeInMin, ingredients, steps
+            ) VALUES (
+                $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16
+            )`,
         };
 
         const values = [
             recipe.id,
             recipe.imgUrl,
             recipe.title,
-            recipe.overview || null,
+            recipe.author,
+            recipe.createdAt,
+            recipe.description || null,
+            recipe.mealType,
+            recipe.course,
+            recipe.diet || null,
+            recipe.cuisine,
+            recipe.servings,
+            recipe.caloriesPerServing,
+            recipe.prepTimeInMin,
+            recipe.cookTimeInMin,
             recipe.ingredients,
-            recipe.steps,
-            recipe.totalTime || null,
-            recipe.servings || null,
-            recipe.calories || null,
-            recipe.cuisine || null,
-            recipe.course || null,
-            recipe.dietaryRestrictions || null
+            recipe.steps
         ];
 
         pool.query(insertQuery, values, (err, res) => {
@@ -55,7 +67,6 @@ const seedRecipesTable = async () => {
                 console.error("⚠️ Error inserting recipes:", err);
                 return;
             }
-
             console.log("🎉 Recipes added successfully.");
         });
     });
