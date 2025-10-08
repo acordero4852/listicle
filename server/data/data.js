@@ -122,7 +122,7 @@ type Recipes = Recipe[];
 
 const recipesWithoutIDAndTime = [
     {
-        imgUrl: "",
+        imgUrl: "https://uk.ooni.com/cdn/shop/articles/20220211142645-margherita-9920_e41233d5-dcec-461c-b07e-03245f031dfe.jpg?v=1737105431&width=1080",
         title: "Classic Margherita Pizza",
         author: "Giulia Romano",
         description: "A traditional Italian pizza topped with fresh mozzarella, tomatoes, and basil.",
@@ -152,7 +152,7 @@ const recipesWithoutIDAndTime = [
         ]
     },
     {
-        imgUrl: "",
+        imgUrl: "https://www.seriouseats.com/thmb/DbQHUK2yNCALBnZE-H1M2AKLkok=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chicken-tikka-masala-for-the-grill-recipe-hero-2_1-cb493f49e30140efbffec162d5f2d1d7.JPG",
         title: "Chicken Tikka Masala",
         author: "Priya Deshmukh",
         description: "Tender chicken pieces simmered in a creamy spiced tomato sauce.",
@@ -184,7 +184,7 @@ const recipesWithoutIDAndTime = [
         ]
     },
     {
-        imgUrl: "",
+        imgUrl: "https://frommybowl.com/wp-content/uploads/2023/03/Vegan_Pad_Thai_FromMyBowl-19-1.jpg",
         title: "Vegan Pad Thai",
         author: "Somsak Charoen",
         description: "A plant-based version of the classic Thai noodle dish.",
@@ -214,7 +214,7 @@ const recipesWithoutIDAndTime = [
         ]
     },
     {
-        imgUrl: "",
+        imgUrl: "https://www.onceuponachef.com/images/2022/07/Crepes-1200x1488.jpg",
         title: "French Crêpes",
         author: "Luc Moreau",
         description: "Thin, delicate pancakes perfect for sweet or savory fillings.",
@@ -242,7 +242,7 @@ const recipesWithoutIDAndTime = [
         ]
     },
     {
-        imgUrl: "",
+        imgUrl: "https://www.allrecipes.com/thmb/FOHqtfrZVg0WAMdkFE3bnp7SNO4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-RM-14064-easy-guacamole-ddmfs-3x4-9e4a1eb1bb34421a99db675b53a29e53.jpg",
         title: "Guacamole",
         author: "Marisol Herrera",
         description: "A creamy avocado dip with lime, cilantro, and tomatoes.",
@@ -270,7 +270,7 @@ const recipesWithoutIDAndTime = [
         ]
     },
     {
-        imgUrl: "",
+        imgUrl: "https://www.onceuponachef.com/images/2023/06/greek-salad-1-1200x1477.jpg",
         title: "Greek Salad",
         author: "Nikos Papadakis",
         description: "A refreshing salad with tomatoes, cucumbers, olives, and feta cheese.",
@@ -299,7 +299,7 @@ const recipesWithoutIDAndTime = [
         ]
     },
     {
-        imgUrl: "",
+        imgUrl: "https://www.justonecookbook.com/wp-content/uploads/2022/06/Miso-Soup-8297-I.jpg",
         title: "Japanese Miso Soup",
         author: "Yuki Takahashi",
         description: "A light soup with tofu, seaweed, and green onions in miso broth.",
@@ -326,7 +326,7 @@ const recipesWithoutIDAndTime = [
         ]
     },
     {
-        imgUrl: "",
+        imgUrl: "https://www.munatycooking.com/wp-content/uploads/2023/03/Lamb-Shanks-Couscous-feature-image.jpg",
         title: "Moroccan Couscous",
         author: "Amina El Idrissi",
         description: "Fluffy couscous with vegetables and aromatic spices.",
@@ -355,7 +355,7 @@ const recipesWithoutIDAndTime = [
         ]
     },
     {
-        imgUrl: "",
+        imgUrl: "https://upload.wikimedia.org/wikipedia/commons/2/20/Cheesebread.jpg",
         title: "Pão de Queijo (Brazilian Cheese Bread)",
         author: "Felipe Souza",
         description: "Chewy, cheesy gluten-free bread balls made with tapioca flour.",
@@ -382,7 +382,7 @@ const recipesWithoutIDAndTime = [
         ]
     },
     {
-        imgUrl: "",
+        imgUrl: "https://www.allrecipes.com/thmb/LlegF5NeKOTHqs9WZw5RWWwSyjU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/77768-Vietnamese-Iced-Coffee-DDMFS-4x3-62f34e1d4658433a83801c8533dbcafe.jpg",
         title: "Vietnamese Iced Coffee",
         author: "Minh Tran",
         description: "Strong coffee sweetened with condensed milk and served over ice.",

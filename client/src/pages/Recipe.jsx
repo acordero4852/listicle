@@ -2,7 +2,11 @@ import React from 'react';
 
 function Recipe({data}) {
     return (
-        <div>Recipe</div>
+        <div>
+            <pre>
+                {JSON.stringify(data, null, 2)}
+            </pre>
+        </div>
     );
 }
 
