@@ -7,19 +7,19 @@ const createRecipesTable = async () => {
 
         CREATE TABLE recipes (
             id TEXT PRIMARY KEY,
-            imgUrl TEXT NOT NULL,
+            img_url TEXT NOT NULL,
             title TEXT NOT NULL,
             author TEXT NOT NULL,
-            createdAt TIMESTAMPTZ DEFAULT NOW(),
+            created_at TIMESTAMPTZ DEFAULT NOW(),
             description TEXT,
-            mealType TEXT NOT NULL,
+            meal_type TEXT NOT NULL,
             course TEXT NOT NULL,
             diet TEXT[],
             cuisine TEXT NOT NULL,
             servings INTEGER NOT NULL,
-            caloriesPerServing INTEGER NOT NULL,
-            prepTimeInMin INTEGER NOT NULL,
-            cookTimeInMin INTEGER NOT NULL,
+            calories_per_serving INTEGER NOT NULL,
+            prep_time_in_min INTEGER NOT NULL,
+            cook_time_in_min INTEGER NOT NULL,
             ingredients TEXT[] NOT NULL,
             steps TEXT[] NOT NULL
         );
@@ -37,7 +37,7 @@ const seedRecipesTable = async () => {
     recipeData.forEach((recipe) => {
         const insertQuery = {
             text: `INSERT INTO recipes (
-                id, imgUrl, title, author, createdAt, description, mealType, course, diet, cuisine, servings, caloriesPerServing, prepTimeInMin, cookTimeInMin, ingredients, steps
+                id, img_url, title, author, created_at, description, meal_type, course, diet, cuisine, servings, calories_per_serving, prep_time_in_min, cook_time_in_min, ingredients, steps
             ) VALUES (
                 $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16
             )`,
